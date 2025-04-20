@@ -520,10 +520,10 @@ class Episode extends AbstractModel
     }
 
     /**
-     * @param int $runtime
+     * @param int|null $runtime
      */
-    public function setRuntime(int $runtime): void
+    public function setRuntime(?int $runtime): void
     {
-        $this->runtime = $runtime;
+        $this->runtime = $runtime ?? 0;
     }
 }
